@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcs</title>
+</head>
+<body>
+    <h1>some calc</h1>
+    <script>
+        function Calculator() {
+
+            this.read = function() {
+                this.a = +prompt('a = ', 4); 
+                this.b = +prompt('b = ', 5); 
+                /* need '+prompt' or it will be string */
+            },
+
+            this.sum = function() {
+                return(this.a + this.b).toFixed(2);
+            }
+
+        }
+        
+        let calculator = new Calculator();
+        calculator.read();
+        alert('sum = ' + calculator.sum());
+    </script>
+</body>
+</html>
