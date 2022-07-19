@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function readNumber() {
+
+            this.read = function() {
+                this.a = prompt('a = ', 4); 
+                this.checkingForValid();
+            },
+
+            this.checkingForValid = function() {
+                if ((this.a === null) || (this.a === ' ')) {
+                    return this.number = null;
+                }
+                if (isFinite(this.a)) {
+                    return this.number = +this.a;
+                } else this.read();
+            }
+
+        }
+
+        let readingNumber = new readNumber();
+        readingNumber.read();
+        alert('number = ' + readingNumber.number);
+    </script>
+</body>
+</html>
