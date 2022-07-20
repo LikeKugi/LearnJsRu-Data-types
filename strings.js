@@ -72,3 +72,8 @@ console.log( truncate1("Всем привет!", 20));
 console.log( truncate1("Вот, что мне хотелось бы сказать на эту тему:", 20));
 
 /* ****************************************************** */
+
+function extractCurrencyValue(str) {
+    return str.slice(1);
+}
+console.log(extractCurrencyValue('$120'));
